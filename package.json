@@ -1,0 +1,12 @@
+{
+  "name": "mock-data-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@faker-js/faker": "9.9.0",
+    "express": "^5.2.1",
+    "uuid": "^13.0.0"
+  }
+}
