@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { faker } from "@faker-js/faker";
 import express from "express";
+import cors from 'cors';
 
 export const generateUsers = (length = 500) => {
   return Array.from({ length }, (_, i) => {
@@ -16,6 +17,8 @@ export const generateUsers = (length = 500) => {
 
 const app = express();
 const PORT = 3000;
+
+app.use(cors())
 
 app.get("/api/users", (req, res) => {
   const length = Number.parseInt(req.query.length) || 500;
